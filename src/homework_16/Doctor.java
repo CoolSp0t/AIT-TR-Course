@@ -24,4 +24,12 @@ public class Doctor {
         this.workExperienceInYears = workExperienceInYears;
     }
 
+    void healing(){
+        System.out.println("I am healing");
+    }
+
+    void operating(){
+        System.out.println("I am operating");
+    }
+
 }

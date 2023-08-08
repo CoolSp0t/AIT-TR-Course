@@ -23,4 +23,14 @@ public class Pants {
         this.color = color;
         this.type = type;
     }
+
+    void inTheCloset(){
+        System.out.println("Pants are in the closet");
+    }
+
+    void areWashed(){
+        System.out.println("Pants are washed");
+    }
+
+
 }

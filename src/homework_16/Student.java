@@ -25,4 +25,12 @@ public class Student {
         this.group = group;
     }
 
+    void learning(){
+        System.out.println("I am learning");
+    }
+
+    void preparing(){
+        System.out.println("I am preparing");
+    }
+
 }
