@@ -22,7 +22,7 @@ public class Dog {
     }
 
     void whoAmI(){
-        System.out.println("Я собака " + name + " я прыгаю " + jumpHeight + " см ");
+        System.out.println("Я собака " + name + " я прыгаю, " + jumpHeight + " см ");
     }
 
     void jump(int height){

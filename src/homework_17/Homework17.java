@@ -12,6 +12,7 @@ public class Homework17 {
             }
         }
         System.out.println("Собака перепрыгнула " + count + " барьеров");
+        dog.whoAmI();
 
 
 
