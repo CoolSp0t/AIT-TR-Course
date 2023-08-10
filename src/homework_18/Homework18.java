@@ -27,6 +27,9 @@ public class Homework18 {
         RubberArray ra1 = new RubberArray(ints);
         ra1.printArray();
 
+        ints[0] = 1000;
+        ra1.printArray();
+
 
 
     }

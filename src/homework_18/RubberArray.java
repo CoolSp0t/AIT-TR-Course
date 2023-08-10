@@ -11,7 +11,7 @@ public class RubberArray {
     }
 
     public RubberArray(int[] ints){ // Конструктор по массиву
-        this.array = ints;
+        this.array = Arrays.copyOf(ints, ints.length);
     }
     public void add(int value){ // добавление значения
         extractArray();
