@@ -30,7 +30,9 @@ public class Homework18 {
         ints[0] = 1000;
         ra1.printArray();
 
-
-
+        ra.add(3, 10 ,3);
+        ra.printArray();
+        ra.deleteAllByValue(3);
+        ra.printArray();
     }
 }

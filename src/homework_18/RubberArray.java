@@ -54,13 +54,16 @@ public class RubberArray {
         return -1;
     }
 
-    public int returnValueByIndex(int index){ // поиск значения по индексу
+    public int returnValueByIndex(int index){// поиск значения по индексу
         int result = array[0];
-        for (int i = 0; i <= index; i++) {
+        if(index < 0 || index >= array.length){
+            return Integer.MIN_VALUE;
+        }
+        for (int i = 0; i <= index; i++) { // это не обязательно можно просто сразу вернуть число по индексу
             if(i == index);
             result = array[i];
         }
-        return result;
+        return result; //array[index]
     }
 
 
@@ -78,13 +81,33 @@ public class RubberArray {
         }
     }
 
-    public void deleteByValue(int value){ // удаления по значению
+//    public void deleteByValue(int value){ // удаления по значению //var 1
+//        int index = returnIndexOfValue(value);
+//        deleteByIndex(index);
+//    }
+//
+    public boolean deleteByValue(int value){ // удаления по значению // var2
         int index = returnIndexOfValue(value);
+        if(index < 0 ) return false;
         deleteByIndex(index);
+        return  true;
     }
 
+    public int deleteAllByValue(int value){
+      int count = 0;
+      // пытаемся найти значение в массиве. если находим удаляем значение.
+      //если не находим , возвращается false. Выходим из цикла while
+      while(deleteByValue(value)){
+          count++;
+      }
+        return count;
+    }
+
+
+
     public void swapByIndex(int index, int value){ // замена по индексу на новое значение
-    array[index] = value;
+        if(index < 0 || index >= array.length)
+        array[index] = value;
 
     }
 
@@ -92,6 +115,12 @@ public class RubberArray {
         int index =  returnIndexOfValue(oldValue);
         swapByIndex(index, newValue);
     }
+
+    private boolean isIndexIncorrect(int index){
+        return !(index >= 0 && index < array.length);
+    }
+
+
 
 }
 
