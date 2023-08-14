@@ -59,10 +59,6 @@ public class Dog {
         maxJump = jumpHeight*MULTIPLIER;
         jumpUpgrade = 10;
     }
-    public Dog(){
-
-    }
-
 
    public void whoAmI(){
         System.out.println("Я собака " + name + " я прыгаю, " + jumpHeight + " см ");
