@@ -1,4 +1,4 @@
-package homework_19;
+package homework_20;
 
 public class Dog {
 
@@ -12,7 +12,12 @@ public class Dog {
     private String name;
     private int jumpHeight;
     private int maxJump;
-    private   int jumpUpgrade;
+
+
+     int jumpUpgrade;
+    static private int  numberOfJumps;
+
+    static final int MULTIPLIER = 2;
 
 
     public void setName(String string){
@@ -51,7 +56,7 @@ public class Dog {
     public Dog(String name, int jumpHeight){
         this.name = name;
         this.jumpHeight = jumpHeight;
-        maxJump = jumpHeight*2;
+        maxJump = jumpHeight*MULTIPLIER;
         jumpUpgrade = 10;
     }
     public Dog(){
@@ -65,6 +70,7 @@ public class Dog {
 
   private void jump(int height){
         System.out.println("Я перепрыгиваю барьер " +  height + "см");
+        numberOfJumps++;
     }
 
    public void training(){
@@ -108,7 +114,9 @@ public class Dog {
     }
 
 
-
+    static void showNumberOfJump(){
+        System.out.println("Всего прыжков: " + numberOfJumps);
+    }
 
 
 }
