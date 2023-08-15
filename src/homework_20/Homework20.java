@@ -16,6 +16,10 @@ public class Homework20 {
         Dog dog1 = new Dog("1", 120);
         Dog dog2 = new Dog("2", 100);
 
+        dog.whoAmI();
+        dog1.whoAmI();
+        dog2.whoAmI();
+
         int[] ints = {100, 150 , 200, 180};
 
         for( int currentBarrier : ints){
@@ -28,6 +32,8 @@ public class Homework20 {
             dog2.getBarrier(currentBarrier);
         }
         Dog.showNumberOfJump();
+
+//        Dog.numberOfJumps = 10; // Было поле открыто это плохо. так как его можно изменять
 
     }
 

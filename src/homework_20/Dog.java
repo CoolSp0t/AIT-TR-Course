@@ -9,12 +9,23 @@ public class Dog {
     //Должна уметь прыгать и должна уметь тренироваться. За каждую тренировку высота прыжка увеличивается на 10 сантиметров
     //Максимальная высота, которую может натренировать собака не может быть больше, чем 2раза высоту первоначального прыжка
 
+    //HW 19
+    //Task 0
+    //
+    //Инкапсулировать class Dog из домашнего задания к уроку 17
+
+
+    //Homework 20
+    //Task 0
+    //И опять будем дорабатывать наш класс Dog. Добавить в класс константу.
+    // Использовать эту константу в классе. Добавить в класс поле, в котором будет храниться количество прыжков, сделанных всеми объектами класса.
+    // Добавить в класс статический метод, возвращающий общее количество прыжков, сделанных всеми собаками
     private String name;
     private int jumpHeight;
     private int maxJump;
 
 
-     int jumpUpgrade;
+    private int jumpUpgrade;
     static private int  numberOfJumps;
 
     static final int MULTIPLIER = 2;
@@ -112,6 +123,10 @@ public class Dog {
 
     static void showNumberOfJump(){
         System.out.println("Всего прыжков: " + numberOfJumps);
+    }
+
+    public static int getNumberOfJumps(){
+        return numberOfJumps;
     }
 
 
