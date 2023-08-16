@@ -6,10 +6,11 @@ public class Drink {
     private boolean isHaveDrinkAlcohol;
     private int mlInBottle;
 
-    public Drink(String name,String color , int mlInBottle) {
+    public Drink(String name,String color , int mlInBottle, boolean isHaveDrinkAlcohol) {
         this.name = name;
         this.color = color;
         this.mlInBottle = mlInBottle;
+        this.isHaveDrinkAlcohol = isHaveDrinkAlcohol;
     }
 
 

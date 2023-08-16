@@ -4,14 +4,14 @@ public class Animal {
 
     private String name;
     private int age;
-    private final int numberOfAnimals;
+    private final int id;
 
     private static int counter;
 
     public Animal(String name, int age) {
         this.name = name;
         this.age = age;
-        this.numberOfAnimals = counter++;
+        this.id = counter++;
     }
 
     public String getName() {
@@ -31,8 +31,8 @@ public class Animal {
     }
 
 
-    public int getNumberOfAnimals() {
-        return numberOfAnimals;
+    public int getId() {
+        return id;
     }
     public void jump(){
         System.out.println("Я прыгаю");
@@ -47,7 +47,7 @@ public class Animal {
     }
 
     public String toString(){
-        return  "Животное:"  + numberOfAnimals +  "; имя: " + name + "; мой возвраст: " + age;
+        return  "Животное:"  + id +  "; имя: " + name + "; мой возвраст: " + age;
     }
 
 
