@@ -11,12 +11,14 @@ public class Lesson21 {
         System.out.println("До сортировки");
         homework_21.ArraysUtil.printArray(ints);
         System.out.println(Arrays.toString(ints));
+        System.out.println(homework_21.ArraysUtil.toString(ints));
 
         ArraysUtil.sortSelection(ints);
 
         System.out.println("После сортировки");
         homework_21.ArraysUtil.printArray(ints);
         System.out.println(Arrays.toString(ints));
+        System.out.println(homework_21.ArraysUtil.toString(ints));
 
         int numberForSearch = 100;
         int index = ArraysUtil.binarySearch(ints , numberForSearch);

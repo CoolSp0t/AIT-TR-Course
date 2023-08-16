@@ -78,6 +78,7 @@ public class ArraysUtil {
         System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
+//            System.out.print(array[i] + (i < array.length-1 ? ", " : "");  альтернативный вывод через тернарный оператор
             if (i < array.length - 1) {
                 System.out.print(", ");
             }
@@ -86,4 +87,30 @@ public class ArraysUtil {
         System.out.println("]");
 
     }
+
+
+    public static String toString(int[] array) {
+        String result = "[";
+//        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+//            System.out.print(array[i]);
+//            System.out.print(array[i] + (i < array.length-1 ? ", " : "");  альтернативный вывод через тернарный оператор
+           result += array[i] + (i < array.length-1 ? ", " : "]");
+//            if (i < array.length - 1) {
+//                System.out.print(", ");
+//            }
+        }
+//        System.out.println("]");
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
 }
