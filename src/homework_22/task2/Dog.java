@@ -1,4 +1,4 @@
-package homework_22;
+package homework_22.task2;
 
 public class Dog extends Animal{
 
