@@ -32,8 +32,29 @@ public class Main23 {
 
 
         System.out.println("Homework23");
-        driver.addCategories("D");
+        driver.addCategories1("D");
+        driver.addCategories1("A");
+        driver.addCategories1("asd");
+        driver.addCategories1("dggg");
+        driver.addCategories1("dasd");
+        driver.addCategories1("llm");
         System.out.println(driver.toString());
+//        System.out.println(driver.removeCategory("D"));
+        System.out.println(driver.toString());
+//        driver.removeAllCategories();
+        System.out.println(driver.toString());
+
+
+        System.out.println("--------------------------");
+        driver.testArrayCopy(2);
+
+
+
+
+
+
+
+
 
 
     }
