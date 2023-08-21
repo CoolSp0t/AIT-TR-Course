@@ -6,7 +6,7 @@ public class Homework25 {
     public static void main(String[] args) {
         String str = "Hello World";
         System.out.println(strEndsWithAnotherStr(str, "World"));
-       createsCharArray(str);
+        createsCharArray(str);
 
     }
     // Task1
@@ -22,8 +22,8 @@ public class Homework25 {
 
     public static void createsCharArray(String str){
         char[] result = str.toCharArray();
-        for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]+ "");
+        for ( char c: result){
+            System.out.println(c + " ");
         }
 
     }
