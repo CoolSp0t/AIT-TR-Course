@@ -27,8 +27,58 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Choose your pizza : 1. mozzarella 2. salami 3.hawaii ");
-        int x = scanner.nextInt();
-        PizzaFactory.makePizza(x);
+//        System.out.println("Choose your pizza : 1. mozzarella 2. salami 3.hawaii ");
+//        int x = scanner.nextInt();
+//        PizzaFactory.makePizza(x);
+/*
+        PizzaFactory factory = new PizzaFactory();
+        Pizza salami = factory.createPizza("1");
+        salami.orderPizza();
+
+        System.out.println();
+
+        Pizza mozzarella = factory.createPizza("2");
+        mozzarella.orderPizza();
+
+        System.out.println();
+
+
+        Pizza hawaii = factory.createPizza("3");
+        hawaii.orderPizza();
+*/
+
+        do {
+            System.out.println("Choose your pizza : 1. mozzarella 2. salami 3.hawaii ");
+            String pizzaChoice = scanner.nextLine();
+            PizzaFactory.makePizza(pizzaChoice);
+//            while (pizzaChoice == null){
+//                System.out.println("Wrong choice . try one more time");
+//                pizzaChoice = scanner.nextLine();
+//                PizzaFactory.makePizza(pizzaChoice);
+//            }
+
+        } while (!scanner.nextLine().equalsIgnoreCase("no"));
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
 }
