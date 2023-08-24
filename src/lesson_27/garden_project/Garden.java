@@ -66,8 +66,40 @@ public class Garden {
         Plant[] plants = new Plant[2];
         plants[0] = tree;
         plants[1] = flower;
-        for (Plant plant : plants){
-            plant.growPlants(2);
-        }
+
+        growPlants(plants, 2);
+
+
+
+//        for (Plant plant : plants){
+//            plant.growPlants(2);
+//        }
     }
+
+
+    public static void growPlants(Plant[] plants,int years){
+        System.out.println("Growing plants for " + years + " years");
+        for (int i = 0; i < years; i++) {
+            for (Plant plant: plants){
+                plant.doSpring();
+                plant.doSummer();
+                plant.doAutumn();
+                plant.doWinter();
+            }
+        }
+
+        for (Plant plant : plants){
+            System.out.println(plant.getName() + " has height: " + plant.getHeight() + " and is " + plant.getAge() + " years old");
+        }
+
+
+
+    }
+
+
+
 }
+
+
+
+

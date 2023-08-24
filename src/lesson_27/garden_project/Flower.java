@@ -16,6 +16,7 @@ public class Flower extends Plant {
     }
 
     public void doAutumn(){
+        setHeight(0);
         System.out.println(getName() + " is cut. Height is " + getHeight() + " cm");
     }
 }

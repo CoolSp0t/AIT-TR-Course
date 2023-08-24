@@ -50,18 +50,18 @@ public abstract class Plant {
         return getName() + " has height " + getHeight() + " and is " + getAge() + " years old";
     }
 
-    public void growPlants(int x){
-        for (int i = 0; i < x; i++) {
-            doSpring();
-            doSummer();
-            doAutumn();
-            doWinter();
-            System.out.println(toString());
-            System.out.println();
-        }
-
-
-    }
+//    public void growPlants(int x){
+//        for (int i = 0; i < x; i++) {
+//            doSpring();
+//            doSummer();
+//            doAutumn();
+//            doWinter();
+//            System.out.println(toString());
+//            System.out.println();
+//        }
+//
+//
+//    }
 
 
 
