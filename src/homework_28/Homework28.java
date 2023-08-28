@@ -15,6 +15,9 @@ public class Homework28 {
         System.out.println("Round perimeter: " + round.calculatePerimeter());
 
         System.out.println("Total square: " + totalSquare(square, square1));
+
+        double[] doubles = {square, square1};
+        System.out.println("Total square: " +totalSquare(doubles));
     }
 
 
@@ -22,5 +25,11 @@ public class Homework28 {
         return rectangleSquare + roundSquare;
     }
 
-
+    public static double totalSquare(double[] doubles){
+        double result = 0;
+        for (int i = 0; i < doubles.length; i++) {
+            result += doubles[i];
+        }
+        return result;
+    }
 }
