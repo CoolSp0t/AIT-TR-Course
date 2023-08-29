@@ -1,5 +1,7 @@
 package lesson_30;
 
+import java.util.Arrays;
+
 public class Main {
     /*
     написать свою реализацию метода substring, который работает также как метод substring класса String,
@@ -14,6 +16,7 @@ public class Main {
 
         System.out.println(subString(str, 2, 5));
         System.out.println(isAnagram(str1, str2));
+        System.out.println(isAnagram2(str1,str2));
 
     }
     public  static String subString(String str , int startIndex, int endIndex){
@@ -32,7 +35,7 @@ public class Main {
     boolean isAnagram( String str1, String str2)
      */
 
-    public static boolean  isAnagram(String str1 , String str2){
+    public static boolean  isAnagram(String str1 , String str2){ // проверял  палиндром ->  не анаграма
         String result = "";
         for (int i = str1.length()-1; i >=0 ; i--) {
             result += str1.charAt(i);
@@ -41,7 +44,7 @@ public class Main {
 
     }
 
-    public static boolean  isAnagram1(String str1 , String str2){
+    public static boolean  isAnagram1(String str1 , String str2){ // Проверял  палиндром
        StringBuilder stringBuilder = new StringBuilder(str1);
        StringBuilder stringBuilder2 = new StringBuilder(str2);
 
@@ -50,6 +53,34 @@ public class Main {
 
 
     }
+
+
+    public static boolean isAnagram2(String str1 , String str2){
+        if(str1.length() != str2.length()){
+            return false;
+        }
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        for (int i = 0; i < charArray1.length; i++) {
+            if(charArray1[i] != charArray2[i]){
+                return false;
+            }
+        }
+
+
+
+//        return Arrays.equals(charArray1, charArray2);
+        return true;
+
+    }
+
+
+
+
+
 
 
 }
