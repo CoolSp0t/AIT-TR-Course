@@ -110,9 +110,11 @@ public class Lesson25 {
         String stringJava = "Java";
 
         int positionOfJ = stringJava.indexOf('J');
+        int positionOf = stringJava.indexOf('k');
         int positionOfA = stringJava.indexOf('a');
         int positionOfA2 = stringJava.indexOf('a', 2);
 
+        System.out.println("Position of  " +positionOf);
         System.out.println("Position of J is " + positionOfJ);
         System.out.println("Position of a is " + positionOfA);
         System.out.println("Position of a is " + positionOfA2);

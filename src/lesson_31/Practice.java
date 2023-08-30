@@ -19,6 +19,7 @@ public class Practice {
         task1(str, search);
 
         patterns(str, search1);
+        System.out.println(count(str, search1));
     }
     public static void task1 (String str, char search){
         int counter = 0;
@@ -42,11 +43,25 @@ public class Practice {
 
         while( i != -1){
             counter++;
-            i = str.indexOf(search, i+1);
+            i = str.indexOf(search, i+search.length());
         }
 
         System.out.println(counter);
 
+    }
+
+
+    public static int count(String str, String pattern){
+        int count = 0;
+        int lastIndex= str.lastIndexOf(pattern);
+
+        for (int i = 0; i < str.length(); i++) {
+            if(lastIndex != -1){
+                count++;
+                lastIndex = str.lastIndexOf(pattern, lastIndex- pattern.length());
+            }
+        }
+        return count;
     }
 }
 
