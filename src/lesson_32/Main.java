@@ -51,6 +51,12 @@ public class Main {
         System.out.println(Circle.compareNumbers(3,5));
 
 
+        System.out.println("---");
+
+        int a = 1 ;
+        int b= 2;
+        System.out.println(Integer.compare(a, b));
+
     }
 
 
