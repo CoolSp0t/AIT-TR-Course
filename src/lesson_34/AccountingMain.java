@@ -50,6 +50,34 @@ public class AccountingMain {
         System.out.println("----------------------------");
 
 
+        Employee[] employees = {employee, employee1};
+        Arrays.sort(employees);
+        System.out.println(Arrays.toString(employees));
+
+
+
+
+        Arrays.sort(employees , new EmployeeIdComparator());
+        System.out.println(Arrays.toString(employees));
+
+
+
+        Arrays.sort(employees, new EmployeeNameIdComparator());
+        System.out.println(Arrays.toString(employees));
+
+        company.removeEmployee(employee);
+        company.allEmployees();
+
+
+        company.sortEmployees();
+        company.allEmployees();
+
+
+
+
+
+
+
 
 
 

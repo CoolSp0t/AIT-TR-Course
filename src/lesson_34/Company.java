@@ -1,5 +1,8 @@
 package lesson_34;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Company {
     
     private Employee[] employees;
@@ -43,6 +46,33 @@ public class Company {
         }
         return result;
     }
+
+
+    public void sortEmployees(){
+//        Employee[] sortedEmployees = new Employee[companySize]; // var1
+//        for (int i = 0; i < companySize; i++) {
+//            sortedEmployees[i] = employees[i];
+//        }
+//        Arrays.sort(sortedEmployees);
+        Arrays.sort(employees, 0,companySize); // var 2
+    }
+
+    public void sortEmployeesById(){
+        Arrays.sort(employees,0, companySize, new EmployeeIdComparator());
+    }
+
+    public void sortEmployeesByNameThenId(){
+        Arrays.sort(employees,0,companySize,new EmployeeNameIdComparator());
+    }
+
+    public void sortEmployeesByIdAnonym(){
+        Arrays.sort(employees, 0, companySize, new Comparator<Employee>() {
+            public int compare(Employee employee1, Employee employee2){
+                return employee1.getId()-employee2.getId();
+            }
+        });
+    }
+
 
 
 
