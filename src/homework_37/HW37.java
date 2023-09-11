@@ -2,6 +2,7 @@ package homework_37;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class HW37 {
     /*
@@ -21,7 +22,7 @@ public class HW37 {
         System.out.println(isFirstSmallOrBig(arrayList));
     }
 
-    public static String isFirstSmallOrBig(ArrayList<String> arrayList){
+    public static String isFirstSmallOrBig(ArrayList<String> arrayList){ // мой вариант
         if(arrayList == null) return null;
 
         String min = arrayList.get(0);
@@ -44,13 +45,39 @@ public class HW37 {
             return min;
         }
 
+    }
+
+    public  String findShortestOrLongest(List<String> list){
+        if(list == null) return null;
+
+        String min = list.get(0);
+        String max = list.get(0);
+        int indexMinEl = 0;
+        int indexMaxEl = 0;
+
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).length() < min.length()){
+                min = list.get(i);
+                indexMinEl = i;
+            } else if (list.get(i).length() > max.length()) {
+                max = list.get(i);
+                indexMaxEl = i;
+            }
+        }
 
 
 
+        if(indexMinEl < indexMaxEl){
+            return min;
+        }else {
+            return max;
+        }
 
     }
 
 
+
 }
+
 
 

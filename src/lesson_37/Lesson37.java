@@ -12,8 +12,8 @@ public class Lesson37 {
     /*
     LINKEDLIST
     конструкторы
-    LinkedList()
-    LinkedList(Collection collections)
+    LinkedList() - создает пустой список
+    LinkedList(Collection collections) создается список, в который добавляются все элементы  коллекции collection
       */
 }
 
