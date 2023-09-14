@@ -11,8 +11,13 @@ public class HW40 {
         names.add("Ann");
         names.add("Bob");
         names.add("Jack");
-        names.add("Ann");
         names.add("Bob");
+        names.add("Ann");
+
+
+
+        System.out.println(getDuplicates(names));
+
     }
 
 
@@ -27,5 +32,45 @@ public class HW40 {
         }
         return uniqueNamesList;
     }
+
+    public  List<String> removeDuplicates(List<String> input){
+        Set<String> res = new HashSet<>(input);
+
+        return new ArrayList<>(res);
+    }
+
+
+    public static List<String> getDuplicates(List<String> input){
+        Set<String> unique = new HashSet<>();
+        List<String> arrayList = new ArrayList<>();
+        for (String inputs : input){
+            if(!(unique.add(inputs))){
+                arrayList.add(inputs);
+            }
+        }
+
+        Set<String> res = new HashSet<>(arrayList);
+
+
+        return new ArrayList<>(res);
+
+    }
+
+
+    public  List<String> getDuplicates2(List<String> input){
+        Set<String> set = new HashSet<>();
+        List<String> duplicates =new ArrayList<>();
+
+        for (String s : input){
+            if(!set.add(s) && !duplicates.contains(s) ){
+                duplicates.add(s);
+            }
+        }
+
+        return duplicates;
+    }
+
+
+
 
 }
