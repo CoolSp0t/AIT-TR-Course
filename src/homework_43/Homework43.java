@@ -15,15 +15,7 @@ public class Homework43 {
     [a,b,c] a : false b : false  c: false
     [c,c,c] c : true
      */
-//    public static void main(String[] args) {
-//        String[] strings  = {"a","b","a","b","c"};
-//        System.out.println(duplicateStringInArrayString(strings));
-//        String[] strings1  = {"a","b","c"};
-//        System.out.println(duplicateStringInArrayString(strings1));
-//        String[] strings2  = {"c","c","c"};
-//        System.out.println(duplicateStringInArrayString(strings2));
-//    }
-//
+
 
     public  Map<String,Boolean> duplicateStringInArrayString(String[] strings){
         Map<String,Boolean> map = new HashMap<>();
@@ -35,6 +27,3 @@ public class Homework43 {
 }
 
 
-//{a=true, b=true, c=false}
-//{a=false, b=false, c=false}
-//{c=true}
