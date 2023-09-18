@@ -1,7 +1,6 @@
 package homework_44;
 
-public class Auto {
-
+public class Auto implements Comparable<Auto> {
 
     private String make;
     private String model;
@@ -32,5 +31,11 @@ public class Auto {
                 ", model='" + model + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Auto o) {
+        return model.equals(o.getModel()) ?  Integer.compare(price,o.getPrice()) : model.compareTo(o.getModel());
+
     }
 }
