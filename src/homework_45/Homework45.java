@@ -9,7 +9,7 @@ public class Homework45 {
     При решении использовать мапу.
      */
     public static void main(String[] args) {
-        List<Integer> list =Arrays.asList(1,3,1);
+        List<Integer> list =Arrays.asList(3,3,3);
         List<Integer> list1 =Arrays.asList(1,8,8,8,8,8,1,2,2);
         System.out.println(list);
         Homework45 homework45 = new Homework45();
@@ -26,7 +26,7 @@ public class Homework45 {
             }else numbers.put(list.get(i), 1 );
         }
         for(Integer key : numbers.keySet()){
-            if(numbers.get(key) != 2){
+            if(numbers.get(key) % 2 != 0){
                 return key;
             }
 
@@ -37,13 +37,17 @@ public class Homework45 {
 
     public int returnNonPairNumberMerge(List<Integer> list){
         Map<Integer,Integer> number =new HashMap<>();
-        for (Integer i : list){
-            int res = number.merge(list.get(i), 1,(oldValue,newValue)-> oldValue+1);
-            if(res != 2){
-                return list.get(i);
-            }
+        int res =0;
+        for (int i : list){
+            number.merge(i, 1,(oldValue,newValue)-> oldValue+1);
         }
-        return -1;
+        for(int key : number.keySet()){
+            if(number.get(key) % 2 != 0){
+                res = key;
+            }
+
+        }
+        return res;
     }
 
 
