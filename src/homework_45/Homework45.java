@@ -47,7 +47,8 @@ public class Homework45 {
             }
 
         }
-        return res;
+//        return res;
+        throw new NoSuchElementException();
     }
 
 
