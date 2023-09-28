@@ -37,12 +37,7 @@ public class Homework_51 {
             int counter1;
             int counter2;
             while ((counter1 = first.read(buffer)) != -1 && (counter2 = second.read(buffer2)) != -1) {
-                if (counter1 == counter2) {
-                    System.out.println("the files are the same");
-                }else {
-                    System.out.println("the files are not the same");
-                }
-                if(Arrays.equals(buffer,buffer2)){
+                if (counter1 == counter2 && Arrays.equals(buffer,buffer2)) {
                     System.out.println("the files are the same");
                 }else {
                     System.out.println("the files are not the same");
@@ -55,5 +50,32 @@ public class Homework_51 {
 
 
     }
+
+    public void compareFiles(String file1, String file2){
+        int i,j;
+            try(FileInputStream f1 = new FileInputStream(file1);
+                FileInputStream f2 = new FileInputStream(file2)){
+                do {
+                    i = f1.read();
+                    j = f2.read();
+                    if (i!=j){
+                        break;
+                    }
+                }while (i != -1 && j != -1);
+                if(i != j){
+                    System.out.println("Files differ");
+                }else{
+                    System.out.println("Files are equal");
+                }
+            }catch (IOException e){
+                System.out.println(e.getMessage());
+            }
+    }
+
+
+
+
+
+
 
 }
