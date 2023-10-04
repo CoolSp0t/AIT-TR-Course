@@ -1,6 +1,6 @@
 package lesson_33.comparator_interface;
 
-public class Author implements Comparable<Author>{
+public class Author implements Comparable<Author> {
 
     String authorName;
     String bookName;
@@ -24,12 +24,12 @@ public class Author implements Comparable<Author>{
         return year;
     }
 
-    public int compareTo(Author author){
+    public int compareTo(Author author) {
         return authorName.compareTo(author.getAuthorName());
     }
 
 
-    public String toString(){
+    public String toString() {
         return authorName + " " + bookName + " " + year;
     }
 
