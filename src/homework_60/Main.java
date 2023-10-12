@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toSet;
+
 public class Main {
     public static void main(String[] args) {
         List<Person> personList = new ArrayList<>();
@@ -26,6 +28,7 @@ public class Main {
 //        returnAddress(personList);
         System.out.println(uniqueNames(personList));
         System.out.println(personsByAge(personList));
+        personsByAge1(personList).forEach((k,v)-> System.out.println(k+ "->" + v.stream().map(Person::getName).collect(Collectors.toList())));
 
     }
 
@@ -46,9 +49,16 @@ public class Main {
        return personList.stream().map(Person::getName).distinct().collect(Collectors.toList());
     }
 
+    public static List<String> uniqueNames2(List<String> namesList){
+        return namesList.stream().collect(Collectors.collectingAndThen(toSet(),ArrayList::new));
+    }
+
     // Написать метод, принимающий список Person (из задачи 1) и возвращающий мапу, где возраст является ключом, а лист людей этого возраста значением
 
     public static Map<Integer, List<Person>> personsByAge (List<Person> personList){
         return personList.stream().collect(Collectors.groupingBy(Person::getAge,Collectors.toList()));
+    }
+    public static Map<Integer, List<Person>> personsByAge1 (List<Person> personList){
+        return personList.stream().collect(Collectors.groupingBy(Person::getAge));
     }
 }
