@@ -3,7 +3,9 @@ package homework_62;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Homework62 {
     public static void main(String[] args) {
@@ -72,4 +74,10 @@ public class Homework62 {
         return Period.between(min,max).getDays();
     }
 
+    public static long daysBetween1(List<LocalDate> dateList){
+        List<LocalDate> sorted = dateList.stream().sorted().collect(Collectors.toList());
+
+        return ChronoUnit.DAYS.between(sorted.get(0),sorted.get(sorted.size()-1));
+
+    }
 }

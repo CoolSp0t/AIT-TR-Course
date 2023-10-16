@@ -153,6 +153,14 @@ public class DateTimeAPI {
 
         System.out.println(dateTime.format(ourFormatter));
 
+        // преобразование даты в строку
+        String res = ourFormatter.format(dateTime);
+        System.out.println("DateTime formatted with our formatter  " + res);
+
+        // преобразование строки в дату - метод parse()
+        LocalDateTime  localDateTime = LocalDateTime.parse(res,ourFormatter);
+        System.out.println("DateTime type: " +localDateTime1);
+
         /*
         y - year
         M - month в виде числе
